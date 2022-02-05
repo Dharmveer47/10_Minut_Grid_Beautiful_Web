@@ -1,0 +1,121 @@
+@import "./Utlity.scss";
+@import "./Variable.scss";
+
+.MainNav {
+  @include flex(space-between, center);
+  height: 70px;
+  background: $bgColor;
+  color: $link-text;
+  font-family: "Open Sans", sans-serif;
+  border-radius: 0px 0px 8px 8px;
+}
+.menu {
+  display: none;
+}
+.MainNav > div button,
+img {
+  cursor: pointer;
+}
+.NavHeading {
+  cursor: pointer;
+  margin-left: 10px;
+  color: $zuan-color;
+  font-family: timeRomanBold;
+}
+
+.NavLink {
+  flex-basis: 40%;
+  white-space: nowrap;
+  @include flex(space-between, center);
+  margin-right: 10px;
+
+  // overViewButton
+
+  > :nth-child(1) {
+    padding: $btn-pad;
+    border-radius: $btn-radious;
+    border: none;
+    color: $zuan-color;
+    box-shadow: $btn-overView-box-shadow;
+    background: $btn-overView-bg;
+    :hover {
+      box-shadow: $bttton-shadow;
+    }
+  }
+  button {
+    background: none;
+    border: none;
+    color: $link-text;
+  }
+}
+.NavUser {
+  @include flex(space-between, center);
+  // Hi Team Zuan
+  > :nth-child(1) {
+    white-space: nowrap;
+    margin-right: 10px;
+    font-weight: bold;
+  }
+  > :nth-child(2) {
+    @include flex(center, center);
+    @include square(50px);
+    border-radius: 50%;
+    border: 1px solid $link-text;
+    padding: 3px;
+    margin-right: 10px;
+  }
+}
+@media screen and (max-width: 720px) {
+  .NavUser {
+    display: none;
+  }
+  .NavLink {
+    flex-basis: 100%;
+    button {
+      margin: 0px 5px;
+    }
+  }
+}
+@media screen and (max-width: 1200px) {
+  .NavLink {
+    flex-basis: 50%;
+    button {
+      padding: 5px;
+    }
+  }
+}
+@media screen and (max-width: 576px) {
+  .menu {
+    display: block;
+    color: $zuan-color;
+    cursor: pointer;
+    .menuIn {
+      @include square(2.5em);
+      margin-right: 10px;
+    }
+  }
+  .MainNav {
+    position: relative;
+  }
+//   .NavUser {
+//     display: block;
+//     border: 1px solid yellow;
+//     top: 50%;
+//   }
+  .NavLink {
+    position: absolute;
+    border: 1px solid rebeccapurple;
+    top: 0%;
+    margin-top: 70px;
+    width: 100%;
+    height: 50vh;
+    flex-direction: column;
+    justify-content: space-around;
+    button{
+        width: 90%;
+        height: 50px;
+        background: $bgColor;
+        border-radius: $btn-radious;
+    }
+  }
+}
