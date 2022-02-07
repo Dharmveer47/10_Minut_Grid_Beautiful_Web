@@ -1,0 +1,60 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+img{
+    max-width: 100%;
+    display: block;
+}
+.stacked{
+    display: grid;
+    /* grid-gap: 2px; */
+}
+.stacked > *{
+    /* border: 1px solid red; */
+    grid-column: 1/2;
+    grid-row : 1/2;
+    border-radius: 10px;
+
+}
+.product-grid{
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    grid-gap: 5px;
+    /* grid-gap: ; */
+}
+@media screen and (max-width:576px) {
+    .product-grid{
+        grid-template-columns: 1fr ;
+        grid-template-rows: auto;
+    }
+}
+.card__price{
+    text-align: center;
+    padding: 10px 0px;
+    font-weight: bold;
+    color: gray;
+    border-radius: 10px;
+    box-shadow: 3px 4px 5px rgba(6, 34, 53, 0.692);
+    cursor: pointer;
+}
+.card__content{
+    background-color: rgba(255, 255, 255, 0.426);
+    align-self: flex-end;
+    margin: .5rem;
+    padding: .5rem;
+    box-shadow: 2px 6px 8px gray;
+}
+.card{
+    aspect-ratio: 1/1.5;
+    font-family: sans-serif;
+    text-align: center;
+    /* overflow: auto; */
+    /* border: 3px solid red; */
+}
+.card__img{
+    width: 100%;
+    aspect-ratio: 1/1;
+    /* object-fit:  is use to Imge center and not stratch */
+    object-fit: cover; 
+}
