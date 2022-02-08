@@ -1,0 +1,4 @@
+Hello there,
+	This is Tariq, here to learn how to use git and how to work in groups
+
+Thank you
